@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<html>
+    <head> 
+    <script type="text/javascript" src="search.js"></script>
+    
+    <script>
+      /*
+       * Search Twitter API
+       */
+      function getResults() {
+          var result = search();    
+          
+          var label = document.createElement('h3');
+          label.innerHTML = 'Result: ' + result;
+          document.getElementById('table').innerHTML = '';
+          document.getElementById('table').appendChild(label);
+       }
+    </script>
+ </head>
+ <body>
+
+  <h3>Search Twitter API</h3>
+ 
+    <input type="button" onclick="getResults()" value="Search Twitter" /></td></tr> 
+  
+  <br/>
+  <br/>
+  
+  <div id='table'>
+    <!-- The Results will be displayed here -->
+  </div>
+
+ </form>
+ </body>
